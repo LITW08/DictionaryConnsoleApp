@@ -38,23 +38,15 @@ namespace ConsoleApp53
 
             //dict.Add("foo", new Person { FirstName = "Avrumi" });
             //dict.Add("bar", new Person { FirstName = "John" });
-
-
             //Person me = dict["foo"];
-
-
-
             var ppl = GeneratePeople(500000);
-
             var ids = new List<int>();
             for (int i = 10000; i <= 100000; i++)
             {
                 ids.Add(i);
             }
-
             ids = ids.OrderBy(_ => Guid.NewGuid()).ToList(); //sort list randomly...
             ppl = ppl.OrderBy(_ => Guid.NewGuid()).ToList(); //sort list randomly...
-
 
             var pplDictionary = new Dictionary<int, Person>();
             foreach (Person person in ppl)
